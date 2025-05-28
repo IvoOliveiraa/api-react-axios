@@ -1,0 +1,33 @@
+@use '../variables.scss';
+@use '../mixies.scss';
+
+.home{
+    h1{
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .post{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid variables.$color-txt2;
+
+        h2,
+        p{
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            &::first-letter{
+                text-transform: uppercase;
+            }
+        }
+
+        .btn{
+            @include mixies.btn;
+        }
+    }
+}
